@@ -11,7 +11,7 @@ Se crearon 5 productos que se cargan aleatoriamente en la página de inicio de l
 ```bash
 # Desde la terminal
 cd ~/ruta-deseada/
-git clone --recurse-submodules https://github.com/perritodlp/symfony-docker.git
+git clone https://github.com/perritodlp/symfony-docker.git
 ```
 
 ### :construction: Instalación del ambiente del proyecto
@@ -24,6 +24,13 @@ Instalar Docker, de acuerdo al sistema operativo usado.
 cd symfony-docker
 # Estando allí, ejecutar Docker-compose y esperar a que se instale todo lo necesario
 docker-compose up -d
+# Luego de subir todos los contenedores, realizar:
+# Ejecutar: 
+docker exec -it php7-evertec-test-sf bash
+# Lo dejaría en la ruta: 
+/var/www/symfony
+# Estando allí, ejecutar: 
+composer install
 ```
 
 ### :alien: Visualización
@@ -44,6 +51,7 @@ contraseña: root
 ```bash
 # Se versionó el proyecto Symfony, desde el contenedor PHP de Docker, usando el repo de la instalación de Symfony. 
 Por tanto, para ver los commits, se debe hacer lo siguiente:
+# 1. Ingresar al contenedor y ver el historial de commits en la terminal, así:
 cd ~/ruta-deseada/symfony-docker
 # Ejecutar: 
 docker exec -it php7-evertec-test-sf bash
@@ -51,6 +59,8 @@ docker exec -it php7-evertec-test-sf bash
 /var/www/symfony
 # Estando allí, ejecutar: 
 git log
+# 2. Revisándo el proyecto directamente en su repositorio:
+https://github.com/perritodlp/evertec-test
 ```
 
 ### :construction_worker: Espero que todo funcione!! :fire: 
