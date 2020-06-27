@@ -1,4 +1,4 @@
-### Prueba técnica para desarrollador
+### Prueba técnica para desarrollador Evertec
 
 Se lleva a cabo las actividades para la evalución técnica para ingreso a la compañía. Se verifica en entorno local, el cumplimiento de los criterios de evaluación.
 
@@ -24,32 +24,29 @@ Instalar Docker, de acuerdo al sistema operativo usado.
 cd symfony-docker
 # Estando allí, ejecutar Docker-compose y esperar a que se instale todo lo necesario
 docker-compose up -d
-# Abrir una ventana o pestaña de navegador, abrir la siguiente dirección y probar:
-http://evertec-test.local:8086/
-http://localhost:8096/ usuario root, clave root
-# Verificar usando PhpMyAdmin, que hay creado la base de datos evertec con cuatro tablas 
 ```
-
 
 ### :alien: Visualización
 ```bash
-# Abrir una ventana o pestaña de navegador, abrir la siguiente dirección y probar
+# Abrir una pestaña de navegador, abrir la siguiente dirección y probar:
 http://evertec-test.local:8086/
-```
-
-### :wrench: Indicaciones necesarias
-```bash
-# Dirección PhpMyAdmin
+# Verificar usando PhpMyAdmin, la base de datos evertec con cuatro tablas, así:
 http://localhost:8096/
 usuario: root
 contraseña: root
 ```
 
-### :ambulance: Más indicaciones necesarias
+### :ambulance: Indicaciones necesarias
 ```bash
-# Se hizo la gestión de versiones del proyecto, desde el interior del contenedor PHP de Docker, usando el resositorio que se crea, con la instalación de Symfony, por tanto para ver los commits, se debe hacer lo siguiente:
-cd ~/ruta-proyecto/symfony-docker
-Ejecutar: docker exec -it php7-evertec-test-sf bash
-Lo dejaría en la ruta: /var/www/symfony
-Estando allí, ejecutar git log.
+# Se versionó el proyecto Symfony, desde el contenedor PHP de Docker, usando el repo de la instalación de Symfony. 
+Por tanto, para ver los commits, se debe hacer lo siguiente:
+cd ~/ruta-deseada/symfony-docker
+# Ejecutar: 
+docker exec -it php7-evertec-test-sf bash
+# Lo dejaría en la ruta: 
+/var/www/symfony
+# Estando allí, ejecutar: 
+git log
 ```
+
+### :construction_worker: Espero que todo funcione!! :fire: 
