@@ -11,7 +11,7 @@ Se crearon 5 productos que se cargan aleatoriamente en la página de inicio de l
 ```bash
 # Desde la terminal
 cd ~/ruta-deseada/
-git clone https://github.com/perritodlp/symfony-docker.git
+git clone --recurse-submodules https://github.com/perritodlp/symfony-docker.git
 ```
 
 ### :construction: Instalación del ambiente del proyecto
