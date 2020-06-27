@@ -63,4 +63,4 @@ git log
 https://github.com/perritodlp/evertec-test
 ```
 
-### :construction_worker: Espero que todo funcione!! :fire: 
+### :construction_worker: Espero que todo funcione bien!! :fire: 
