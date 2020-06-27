@@ -28,6 +28,10 @@ docker-compose up -d
 
 ### :alien: Visualización
 ```bash
+# Es necesario editar y modificar el archivo /etc/hosts para agregar:
+vi /etc/hosts
+# Adicionar en alguna parte:
+127.0.0.1 evertec-test.local
 # Abrir una pestaña de navegador, abrir la siguiente dirección y probar:
 http://evertec-test.local:8086/
 # Verificar usando PhpMyAdmin, la base de datos evertec con cuatro tablas, así:
