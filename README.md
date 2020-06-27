@@ -6,12 +6,17 @@ La prueba se realiza usando el framework de PHP Symfony versión 5.1, MySql 5.7 
 
 Se crearon 5 productos que se cargan aleatoriamente en la página de inicio de la prueba. También se manejó aleatoreamente, el identificador del cliente. Algunos datos del cliente, como el documento de identidad, dirección, etc., fueron manejados dejándolos "fijos" en el código que realiza la petición de pago a la pasarela de pagos. 
 
+Instrucciones para Mac Os o Linux. En Windows, podrían variar los comandos.
+
 ### :cloud: Clonando el proyecto desde Github
 
 ```bash
 # Desde la terminal
-cd ~/ruta-deseada/
+cd ~/ruta-instalacion-prueba/
+# Para Git 2.13 o superior
 git clone --recurse-submodules https://github.com/perritodlp/symfony-docker.git
+# Para Git 1.9 a 2.12
+git clone --recursive https://github.com/perritodlp/symfony-docker.git
 ```
 
 ### :construction: Instalación del ambiente del proyecto
@@ -32,9 +37,12 @@ docker exec -it php7-evertec-test-sf bash
 composer install
 ```
 
-### :alien: Visualización
+### :alien: Visualización de la prueba 
 ```bash
-# Es necesario editar y modificar el archivo /etc/hosts para agregar:
+# Se puede usar el proyecto sin necesidad del host virtual, así:
+http://localhost:8086/
+# Para usarlo con el hosts virtual, es necesario editar y modificar 
+# el archivo /etc/hosts para agregar:
 vi /etc/hosts
 # Adicionar en alguna parte:
 127.0.0.1 evertec-test.local
@@ -46,13 +54,14 @@ usuario: root
 contraseña: root
 ```
 
-### :ambulance: Indicaciones necesarias
+### :ambulance: Algunas indicaciones necesarias
+
+Se versionó el proyecto Symfony, internamente desde el contenedor PHP de Docker, usando el repositorio de la instalación de Symfony, quedando como submodulo de éste repositorio principal.
+Por tanto, para ver los commits, se debe hacer lo siguiente:
+
 ```bash
-# Se versionó el proyecto Symfony, desde el contenedor PHP de Docker, 
-# usando el repo de la instalación de Symfony. 
-# Por tanto, para ver los commits, se debe hacer lo siguiente:
 # 1. Ingresar al contenedor y ver el historial de commits en la terminal, así:
-cd ~/ruta-deseada/symfony-docker
+cd ~/ruta-instalacion-prueba/symfony-docker
 # Ejecutar: 
 docker exec -it php7-evertec-test-sf bash
 # Lo dejaría en la ruta: 
