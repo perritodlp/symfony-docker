@@ -24,8 +24,7 @@ Instalar Docker, de acuerdo al sistema operativo usado.
 cd symfony-docker
 # Estando allí, ejecutar Docker-compose y esperar a que se instale todo lo necesario
 docker-compose up -d
-# Luego de subir todos los contenedores, realizar:
-# Ejecutar: 
+# Luego de subir todos los contenedores, ejecutar:
 docker exec -it php7-evertec-test-sf bash
 # Lo dejaría en la ruta: 
 /var/www/symfony
@@ -41,7 +40,7 @@ vi /etc/hosts
 127.0.0.1 evertec-test.local
 # Abrir una pestaña de navegador, abrir la siguiente dirección y probar:
 http://evertec-test.local:8086/
-# Verificar usando PhpMyAdmin, la base de datos evertec con cuatro tablas, así:
+# Usando PhpMyAdmin, verificar la base de datos evertec con cuatro tablas, así:
 http://localhost:8096/
 usuario: root
 contraseña: root
@@ -49,8 +48,9 @@ contraseña: root
 
 ### :ambulance: Indicaciones necesarias
 ```bash
-# Se versionó el proyecto Symfony, desde el contenedor PHP de Docker, usando el repo de la instalación de Symfony. 
-Por tanto, para ver los commits, se debe hacer lo siguiente:
+# Se versionó el proyecto Symfony, desde el contenedor PHP de Docker, 
+# usando el repo de la instalación de Symfony. 
+# Por tanto, para ver los commits, se debe hacer lo siguiente:
 # 1. Ingresar al contenedor y ver el historial de commits en la terminal, así:
 cd ~/ruta-deseada/symfony-docker
 # Ejecutar: 
@@ -59,7 +59,7 @@ docker exec -it php7-evertec-test-sf bash
 /var/www/symfony
 # Estando allí, ejecutar: 
 git log
-# 2. Revisándo el proyecto directamente en su repositorio:
+# 2. Revisando el proyecto directamente en su repositorio del submodulo:
 https://github.com/perritodlp/evertec-test
 ```
 
